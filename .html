@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  <meta charset="UTF-8">  <title>Use and play with basic physic's formulas</title>  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Use and play with basic physic's formulas</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Kinematics: Displacement</h2>
+      <p class="desc">
+        A little ball moves across the ground using
+        <strong>s = u·t + ½·a·t²</strong>.
+      </p>
+      <div class="controls">
+        <label>
+          Initial velocity u (m/s)
+          <input type="number" id="kin-u" value="2" step="0.5">
+        </label>
+        <label>
+          Acceleration a (m/s²)
+          <input type="number" id="kin-a" value="1" step="0.5">
+        </label>
+        <label>
+          Duration t (s)
+          <input type="number" id="kin-t" value="3" step="0.5">
+        </label>
+        <button id="kin-start">Play</button>
+        <button id="kin-reset">Reset</button>
+      </div>
+      <div class="sim-area">
+        <div class="ground"></div>
+        <div class="kin-ball" id="kin-ball"></div>
+      </div>
+      <p class="output">
+        Displacement: <span id="kin-output">–</span>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Forces: Newton's 2nd Law</h2>
+      <p class="desc">
+        A block gets pushed by a force arrow. Acceleration uses
+        <strong>a = F / m</strong>.
+      </p>
+      <div class="controls">
+        <label>
+          Mass m (kg)
+          <input type="number" id="force-m" value="2" step="0.5" min="0.1">
+        </label>
+        <label>
+          Force F (N)
+          <input type="number" id="force-F" value="4" step="0.5">
+        </label>
+        <button id="force-start">Play</button>
+        <button id="force-reset">Reset</button>
+      </div>
+      <div class="sim-area force-area">
+        <div class="ground"></div>
+        <div class="force-block" id="force-block"></div>
+        <div class="force-arrow" id="force-arrow">
+          <div class="arrow-body"></div>
+          <div class="arrow-head"></div>
+        </div>
+      </div>
+      <p class="output">
+        Acceleration: <span id="force-output">–</span>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Circular Motion</h2>
+      <p class="desc">
+        A dot spins in a circle. Inward arrow hints at centripetal force:
+        <strong>F<sub>c</sub> = m·v² / r</strong>.
+      </p>
+      <div class="controls">
+        <label>
+          Mass m (kg)
+          <input type="number" id="circ-m" value="1" step="0.5" min="0.1">
+        </label>
+        <label>
+          Speed v (m/s)
+          <input type="number" id="circ-v" value="3" step="0.5">
+        </label>
+        <label>
+          Radius r (m)
+          <input type="number" id="circ-r" value="2" step="0.5" min="0.1">
+        </label>
+        <button id="circ-start">Play</button>
+        <button id="circ-reset">Reset</button>
+      </div>
+      <div class="sim-area circ-area">
+        <div class="circle" id="circ-circle">
+          <div class="circ-dot" id="circ-dot"></div>
+          <div class="circ-arrow" id="circ-arrow">
+            <div class="circ-arrow-body"></div>
+            <div class="circ-arrow-head"></div>
+          </div>
+        </div>
+      </div>
+      <p class="output">
+        F<sub>c</sub>: <span id="circ-output">–</span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Christopher Torres: Contact if you have ideas for new implimintations.Will be updated throughout further education.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
