@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #b07c7c;
+  color: #000000;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #fb9595;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main section.card:last-of-type {
+    grid-column: 1 / -1;
+  }
+}
+
+.card {
+  background: #837f7f;
+  border-radius: 18px;
+  padding: 16px 16px 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e0e6ff;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.controls input {
+  margin-top: 3px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  border: 1px solid #ccd4ff;
+  font-size: 0.9rem;
+  width: 120px;
+}
+
+.controls button {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: #7bb8ff;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.05s ease, box-shadow 0.05s ease, background 0.15s;
+}
+
+.controls button:hover {
+  background: #5ca4ff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.controls button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.sim-area {
+  position: relative;
+  background: #e6f4ff;
+  border-radius: 16px;
+  border: 2px solid #d0e4ff;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.ground {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #8bc34a;
+  border-radius: 999px;
+}
+
+.kin-ball {
+  position: absolute;
+  bottom: 18px;
+  left: 10px;
+  width: 26px;
+  height: 26px;
+  background: #ffca28;
+  border-radius: 50%;
+  border: 2px solid #f57f17;
+  box-shadow: 0 4px 0 #f57f17;
+}
+
+.force-area {
+  height: 160px;
+}
+
+.force-block {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  width: 40px;
+  height: 30px;
+  background: #ff8a80;
+  border-radius: 8px;
+  border: 2px solid #e64a19;
+  box-shadow: 0 4px 0 #e64a19;
+}
+
+.force-arrow {
+  position: absolute;
+  bottom: 35px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  height: 10px;
+  pointer-events: none;
+}
+
+.arrow-body {
+  height: 6px;
+  border-radius: 999px;
+  background: #42a5f5;
+}
+
+.arrow-head {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #42a5f5;
+  margin-left: 2px;
+}
+
+.circ-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px dashed #90caf9;
+  background: #e1f5fe;
+}
+
+.circ-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ff5252;
+  border: 2px solid #c62828;
+}
+
+.circ-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circ-arrow-body {
+  width: 5px;
+  border-radius: 999px;
+  background: #ab47bc;
+}
+
+.circ-arrow-head {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid #ab47bc;
+}
+
+.output {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.output span {
+  font-weight: 600;
+  color: #1e88e5;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+}
